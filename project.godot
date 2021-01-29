@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="FGJ_2021"
+run/main_scene="res://GameScenes/Play.tscn"
 config/icon="res://icon.png"
 
 [rendering]
