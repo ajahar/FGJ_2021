@@ -1,12 +1,13 @@
 extends Node
 
-signal update_message
+signal gui_level_clear
+signal gui_game_over
 
 var audio
 
 
 var game_timer = 0.0
-export var play_time = 0
+var time_left = 60
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -18,7 +19,13 @@ func _process(delta):
 	
 	if game_timer > 1.0:
 		game_timer = 0.0
-		play_time += 1
+		if time_left != 0:
+			time_left -= 1
+		else:
+			pass
+	
+	if time_left == 0:
+		game_over()
 
 
 func goal_reached():
@@ -29,4 +36,4 @@ func goal_reached():
 func game_over():
 	if audio != null:
 		audio.play_mouse_death()
-	emit_signal("gui_game_over", "Game over")
+	emit_signal("gui_game_over")
