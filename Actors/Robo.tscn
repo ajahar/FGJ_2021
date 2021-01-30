@@ -240,3 +240,6 @@ material/0 = ExtResource( 1 )
 [node name="Cube" type="MeshInstance" parent="Mesh/Chhotu - the mini robot/Cube001"]
 mesh = SubResource( 13 )
 material/0 = null
+
+[node name="SpawnPoint" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.978803, 0.204804, 0, -0.204804, 0.978803, 0, 1.70903, 2.45423 )

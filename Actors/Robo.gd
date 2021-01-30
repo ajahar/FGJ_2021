@@ -1,5 +1,9 @@
 extends RigidBody
 
+export(PackedScene) var pellet_scene
+
+onready var spawn_point: Spatial = $SpawnPoint
+
 var ball_detected = false
 
 # Called when the node enters the scene tree for the first time.
@@ -14,6 +18,9 @@ func _process(delta):
 
 func hit_robot(body):
 	if body.name == "Ball" and !ball_detected:
-		ball_detected = true
 		print("Robo detects the ball")
-		# TODO: Spit out a treat
+		ball_detected = true
+		var pellet = pellet_scene.instance()
+		get_tree().get_root().add_child(pellet)
+		pellet.transform.origin = spawn_point.global_transform.origin
+
