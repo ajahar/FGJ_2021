@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/robo.obj-c545da50e7917c19cd031449907b6cfa.mesh"
+
+[deps]
+
+files=[ "res://.import/robo.obj-c545da50e7917c19cd031449907b6cfa.mesh" ]
+
+source_file="res://Assets/robo.obj"
+dest_files=[ "res://.import/robo.obj-c545da50e7917c19cd031449907b6cfa.mesh", "res://.import/robo.obj-c545da50e7917c19cd031449907b6cfa.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 5, 5, 5 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

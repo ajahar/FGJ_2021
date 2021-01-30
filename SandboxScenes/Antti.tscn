@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://SandboxScenes/Antti.gd" type="Script" id=1]
+[ext_resource path="res://Actors/Robo.tscn" type="PackedScene" id=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.462745, 0.482353, 0.482353, 1 )
@@ -43,6 +44,9 @@ transform = Transform( 1, 0, 0, 0, 0.819152, 0.573577, 0, -0.573577, 0.819152, 0
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 14.9921, 12.5608 )
+light_color = Color( 0.980392, 0.980392, 0.941176, 1 )
+light_energy = 0.5
+light_indirect_energy = 0.5
 directional_shadow_mode = 0
 
 [node name="Floor" type="StaticBody" parent="."]
@@ -86,3 +90,6 @@ material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="Pellet"]
 shape = SubResource( 11 )
+
+[node name="Robo" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.880692, 0, 0.473689, 0, 1, 0, -0.473689, 0, 0.880692, -7.32532, 0, -4.92065 )
