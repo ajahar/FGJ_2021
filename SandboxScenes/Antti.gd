@@ -3,12 +3,14 @@ extends Node
 onready var player: KinematicBody = $Player
 onready var camera: Camera = $Camera
 onready var ball: RigidBody = $Ball
+onready var pellet: RigidBody = $Pellet
 
 var camera_distance: Vector3
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	camera_distance = player.transform.origin + camera.transform.origin
+	pellet.connect("body_entered", self, "hit_pellet")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -27,4 +29,7 @@ func _physics_process(delta):
 
 	if movement.length() > 0:
 		player.move_and_slide(movement * 5, Vector3.UP)
-		
+	
+func hit_pellet(body):
+	if body.name == "Player":
+		print("Hit Pellet")
