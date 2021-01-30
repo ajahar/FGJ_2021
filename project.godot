@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="FGJ_2021"
+config/name="FGJ_2021 - Need for Treat"
 run/main_scene="res://GameScenes/Menu.tscn"
 config/icon="res://icon.png"
 
