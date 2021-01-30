@@ -2,20 +2,26 @@
 
 [ext_resource path="res://Systems/GUI.gd" type="Script" id=1]
 
-[node name="GUI" type="Control"]
-margin_right = 520.0
-margin_bottom = 287.0
+[node name="GUI" type="MarginContainer"]
+margin_left = 20.0
+margin_top = 20.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TimeLeftLabel" type="Label" parent="."]
-margin_left = 19.8837
-margin_top = 9.72091
-margin_right = 92.8837
-margin_bottom = 23.7209
-text = "Time left: 0"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Panel" type="VBoxContainer" parent="."]
+margin_right = 81.0
+margin_bottom = 14.0
+
+[node name="TimeLeftLabel" type="Label" parent="Panel"]
+margin_right = 81.0
+margin_bottom = 14.0
+text = "Time left: 60"
+
+[node name="GameOver" type="Label" parent="Panel"]
+visible = false
+margin_top = 18.0
+margin_right = 81.0
+margin_bottom = 32.0
+text = "Game over"
