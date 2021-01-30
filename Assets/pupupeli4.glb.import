@@ -13,7 +13,7 @@ dest_files=[ "res://.import/pupupeli4.glb-24619c059d5a2a27e6c0ea0ff489bf66.scn" 
 
 nodes/root_type="Spatial"
 nodes/root_name="Scene Root"
-nodes/root_scale=1.0
+nodes/root_scale=10.0
 nodes/custom_script=""
 nodes/storage=0
 materials/location=1
