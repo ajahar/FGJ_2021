@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://SandboxScenes/Antti.gd" type="Script" id=1]
 
@@ -24,6 +24,17 @@ material = SubResource( 4 )
 
 [sub_resource type="CapsuleShape" id=8]
 
+[sub_resource type="SpatialMaterial" id=9]
+albedo_color = Color( 0.498039, 0.392157, 0.0784314, 1 )
+
+[sub_resource type="SphereMesh" id=10]
+material = SubResource( 9 )
+radius = 0.5
+height = 1.0
+
+[sub_resource type="SphereShape" id=11]
+radius = 0.5
+
 [node name="AnttiSandbox" type="Spatial"]
 script = ExtResource( 1 )
 
@@ -46,7 +57,6 @@ shape = SubResource( 3 )
 
 [node name="Ball" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.51518, -5.5912 )
-sleeping = true
 
 [node name="MeshInstance" type="MeshInstance" parent="Ball"]
 mesh = SubResource( 5 )
@@ -64,3 +74,13 @@ material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="Player"]
 shape = SubResource( 8 )
+
+[node name="Pellet" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.30735, 6.1213, -7.43282 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Pellet"]
+mesh = SubResource( 10 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Pellet"]
+shape = SubResource( 11 )
