@@ -81,7 +81,7 @@ shape = SubResource( 8 )
 
 [node name="Pellet" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.30735, 6.1213, -7.43282 )
-contacts_reported = 2
+contacts_reported = 4
 contact_monitor = true
 
 [node name="MeshInstance" type="MeshInstance" parent="Pellet"]

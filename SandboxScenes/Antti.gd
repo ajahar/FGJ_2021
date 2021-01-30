@@ -5,17 +5,19 @@ onready var camera: Camera = $Camera
 onready var ball: RigidBody = $Ball
 onready var pellet: RigidBody = $Pellet
 
-var camera_distance: Vector3
+var camera_dir: Vector3
+var camera_distance = 8
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	camera_distance = player.transform.origin + camera.transform.origin
+	camera_dir = (player.transform.origin + camera.transform.origin).normalized()
+	camera_dir *= camera_distance
 	pellet.connect("body_entered", self, "hit_pellet")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	camera.transform = player.transform
-	camera.translate(camera_distance)
+	camera.translate(camera_dir)
 	camera.look_at(player.transform.origin, Vector3.UP)
 	
 func _physics_process(delta):
