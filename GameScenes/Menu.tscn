@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Systems/Menu.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="RichTextLabel" parent="."]
+margin_left = 279.197
+margin_top = 37.7586
+margin_right = 429.197
+margin_bottom = 67.7586
+rect_scale = Vector2( 4, 4 )
+text = "Need for Treat"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Instructions" type="RichTextLabel" parent="."]
+margin_left = 344.01
+margin_top = 180.086
+margin_right = 744.01
+margin_bottom = 380.086
+text = "Roll the ball to the vending machine to receive the TREATS!
+
+WASD or Arrow Keys: Move bunny
+???: Stomp foot to summon the hooman
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartButton" type="Button" parent="."]
+margin_left = 409.909
+margin_top = 416.711
+margin_right = 473.909
+margin_bottom = 436.711
+rect_scale = Vector2( 2, 2 )
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_up" from="StartButton" to="." method="_on_Button_button_up"]

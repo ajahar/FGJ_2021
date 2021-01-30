@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Systems/GUI.gd" type="Script" id=1]
+
+[node name="GUI" type="Control"]
+margin_right = 520.0
+margin_bottom = 287.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeLeftLabel" type="Label" parent="."]
+margin_left = 19.8837
+margin_top = 9.72091
+margin_right = 92.8837
+margin_bottom = 23.7209
+text = "Time left: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
