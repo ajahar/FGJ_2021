@@ -1,12 +1,10 @@
-extends Spatial
-
-onready var collider: RigidBody = $RigidBody
+extends RigidBody
 
 var ball_detected = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	collider.connect("body_entered", self, "hit_robot")
+	self.connect("body_entered", self, "hit_robot")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

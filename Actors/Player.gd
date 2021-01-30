@@ -23,4 +23,4 @@ func _physics_process(delta):
 		self.rotate(Vector3.UP, deg2rad(ROTATION_SPEED))
 
 	if movement.length() > 0:
-		self.move_and_slide(movement * MOVEMENT_SPEED, Vector3.UP)
+		var collision = self.move_and_collide(movement * MOVEMENT_SPEED * delta)
