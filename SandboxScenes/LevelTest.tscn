@@ -27,3 +27,4 @@ light_energy = 0.5
 light_indirect_energy = 0.5
 shadow_enabled = true
 directional_shadow_mode = 0
+directional_shadow_depth_range = 1
