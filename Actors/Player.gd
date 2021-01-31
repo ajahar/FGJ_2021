@@ -3,7 +3,7 @@ extends KinematicBody
 onready var stomp_timer: Timer = $StompTimer
 onready var mesh: Spatial = $pupu
 
-const MOVEMENT_SPEED = 8
+const MOVEMENT_SPEED = 10
 const ROTATION_SPEED = 5
 
 var stomping = false

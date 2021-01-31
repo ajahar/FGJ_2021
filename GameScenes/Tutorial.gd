@@ -30,5 +30,5 @@ func _process(delta):
 			tutorial_index += 1
 		elif tutorial_index == 4:
 			GameManager.audio.start_music()
-			get_tree().change_scene("res://GameScenes/Play.tscn")
+			get_tree().change_scene("res://GameScenes/Level.tscn")
 
