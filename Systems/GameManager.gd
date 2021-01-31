@@ -31,13 +31,9 @@ func _process(delta):
 
 
 func goal_reached():
-	if audio != null:
-		audio.play_victory()
 	emit_signal("gui_level_clear", "Level clear!")
 
 func game_over():
-	if audio != null:
-		audio.play_mouse_death()
 	emit_signal("gui_game_over")
 
 func reset_ball():
