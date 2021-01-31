@@ -1,6 +1,7 @@
 extends KinematicBody
 
 onready var stomp_timer: Timer = $StompTimer
+onready var mesh: Spatial = $pupu
 
 const MOVEMENT_SPEED = 8
 const ROTATION_SPEED = 5
@@ -20,6 +21,9 @@ func _process(delta):
 		print("stomping")
 		stomp_timer.start()
 		stomping = true
+	
+	if stomping:
+		mesh.transform.origin = Vector3(0,rand_range(0.5, 3),0)
 
 
 func _physics_process(delta):
@@ -37,6 +41,7 @@ func _physics_process(delta):
 
 func stomp_timeout():
 	stomping = false
+	mesh.transform.origin = Vector3(0,0,0)
 	print("stomped very hard")
 	# TODO: Call human?
 	GameManager.reset_ball()

@@ -22,7 +22,7 @@ shape = SubResource( 2 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.57122, -4.99303 )
 
 [node name="StompTimer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 5.0
 one_shot = true
 
 [node name="pupu" parent="." instance=ExtResource( 2 )]
