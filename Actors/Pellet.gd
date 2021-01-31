@@ -18,4 +18,4 @@ func _ready():
 
 func hit_pellet(body):
 	if body.name == "Player":
-		print("Hit Pellet")
+		get_tree().change_scene("res://GameScenes/Credits.tscn")
