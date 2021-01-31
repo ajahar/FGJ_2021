@@ -12,13 +12,6 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
-func _on_Button_button_up():
-	get_tree().change_scene("res://GameScenes/Tutorial.tscn")
-
-
-func _on_Credits_button_up():
-	get_tree().change_scene("res://GameScenes/Credits.tscn")
+func _process(delta):
+	if Input.is_action_just_pressed("ui_cancel"):
+		get_tree().change_scene("res://GameScenes/Menu.tscn")

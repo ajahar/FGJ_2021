@@ -22,10 +22,10 @@ __meta__ = {
 }
 
 [node name="Instructions" type="RichTextLabel" parent="."]
-margin_left = 344.01
-margin_top = 180.086
-margin_right = 744.01
-margin_bottom = 380.086
+margin_left = 308.374
+margin_top = 190.777
+margin_right = 708.374
+margin_bottom = 390.777
 text = "Roll the ball to the vending machine to receive the TREATS!
 
 WASD or Arrow Keys: Move bunny
@@ -46,4 +46,13 @@ text = "Play"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Credits" type="Button" parent="."]
+margin_left = 409.813
+margin_top = 486.431
+margin_right = 473.813
+margin_bottom = 506.431
+rect_scale = Vector2( 2, 2 )
+text = "Credits"
 [connection signal="button_up" from="StartButton" to="." method="_on_Button_button_up"]
+[connection signal="button_up" from="Credits" to="." method="_on_Credits_button_up"]

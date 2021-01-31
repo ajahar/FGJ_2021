@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/lopputekstit.jpg" type="Texture" id=1]
+[ext_resource path="res://GameScenes/Credits.gd" type="Script" id=2]
+
+[node name="Credits" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.359886, 0.359844 )
+texture = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 452.409
+margin_top = 515.905
+margin_right = 573.409
+margin_bottom = 529.905
+text = "Press ESC to return"
