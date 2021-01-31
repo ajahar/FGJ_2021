@@ -34,7 +34,7 @@ texture = ExtResource( 1 )
 visible = false
 margin_right = 40.0
 margin_bottom = 40.0
-rect_scale = Vector2( 0.359736, 0.358604 )
+rect_scale = Vector2( 1.11477, 1.11018 )
 texture = ExtResource( 3 )
 
 [node name="4" type="TextureRect" parent="."]
