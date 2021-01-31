@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/pupu.glb" type="PackedScene" id=1]
+
+[node name="pupu" instance=ExtResource( 1 )]
+
+[node name="10037_Rabbit_v1_L3" parent="." index="0"]
+transform = Transform( -0.0622448, -1.59435e-08, -1.25364e-08, 0, 0.038474, -0.0489304, 2.02819e-08, -0.0489304, -0.038474, 0, -0.608628, 0.97439 )
