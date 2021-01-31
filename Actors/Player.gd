@@ -9,6 +9,7 @@ var stomping = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	GameManager.player = self
 	stomp_timer.connect("timeout", self, "stomp_timeout")
 	pass # Replace with function body.
 
@@ -38,3 +39,7 @@ func stomp_timeout():
 	stomping = false
 	print("stomped very hard")
 	# TODO: Call human?
+	GameManager.reset_ball()
+	
+
+	

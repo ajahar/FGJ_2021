@@ -5,6 +5,8 @@ signal gui_game_over
 
 var audio
 
+var player
+var ball
 
 var game_timer = 0.0
 var time_left = 60
@@ -37,3 +39,7 @@ func game_over():
 	if audio != null:
 		audio.play_mouse_death()
 	emit_signal("gui_game_over")
+
+func reset_ball():
+	# Shit reset, hopefully doesn't fuck player over
+	ball.transform.origin = player.transform.origin + Vector3(5,5,2)
