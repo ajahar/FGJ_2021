@@ -29,7 +29,7 @@ margin_bottom = 380.086
 text = "Roll the ball to the vending machine to receive the TREATS!
 
 WASD or Arrow Keys: Move bunny
-???: Stomp foot to summon the hooman
+Space or Enter: Stomp foot to summon the hooman
 
 "
 __meta__ = {
